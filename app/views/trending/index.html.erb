@@ -1,19 +1,24 @@
 <div class="container">
 <h2>Daily Trending Ruby Developers</h2>
 <table class="table">
-	<tr>
-		<th>User Name</th>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Repo Details</th>
-	</tr>
-	<% @response.each do |daily_trend| %>
-	<tr>
-		<td><%= daily_trend["username"] %></td>
-		<td><%= daily_trend["name"] %></td>
-		<td><%= daily_trend["type"] %></td>
-		<td><b>Name: </b><%= daily_trend["repo"]["name"] %><br/><b>Description: </b><%= raw daily_trend["repo"]["description"] %><br/><b>URL: </b><a href="<%= daily_trend["repo"]["url"] %>" target="_blank"><%= daily_trend["repo"]["url"] %></a></td>
-	</tr>
-	<% end %>
+	<thead class="thead-light">
+		<tr>
+			<th>User Name</th>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Repo Details</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @daily_trending.each do |daily_trend| %>
+		<tr>
+			<td><%= daily_trend["username"] %></td>
+			<td><%= daily_trend["name"] %></td>
+			<td><%= daily_trend["type"] %></td>
+			<td><b>Name: </b><%= daily_trend["repo"]["name"] %><br/><b>Description: </b><%= raw daily_trend["repo"]["description"] %><br/><b>URL: </b><a href="<%= daily_trend["repo"]["url"] %>" target="_blank"><%= daily_trend["repo"]["url"] %></a></td>
+		</tr>
+		<% end %>
+	</tbody>
 </table>
+<%= paginate @daily_trending %>
 </div>
