@@ -1,6 +1,6 @@
 class Trending
 	def get_endpoint(action)
-		api = "https://github-trending-api.now.sh/repositories?language=javascript&since=#{action}"
+		api = "https://github-trending-api.now.sh/developers?language=javascript&since=#{action}"
 	end
 
 	def daily_trending

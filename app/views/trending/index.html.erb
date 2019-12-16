@@ -1,0 +1,16 @@
+<table>
+	<tr>
+		<th>User Name</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Repo</th>
+	</tr>
+	<% @response.each do |daily_trend| %>
+	<tr>
+		<td><%= daily_trend["username"] %></td>
+		<td><%= daily_trend["name"] %></td>
+		<td><%= daily_trend["type"] %></td>
+		<td><%= daily_trend["repo"] %></td>
+	</tr>
+	<% end %>
+</table>
