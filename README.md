@@ -3,22 +3,26 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+* Ruby version : 2.3.1p112
 
-* Ruby version
+* Rails version: 5.0.7.2
 
-* System dependencies
+* Database not required
 
-* Configuration
+* RestClient gem used to fetch the daily trending developers from github-trending-api
 
-* Database creation
+* Used Bootstrap for table structure styles
 
-* Database initialization
+* Displaying daily trending developers in table structure with pagination(kaminari gem used)
 
-* How to run the test suite
+* Steps to see trending page
+   
+   1. Clone project using https://github.com/tejaswikatneni/anynines_task.git
 
-* Services (job queues, cache servers, search engines, etc.)
+   2. run "bundle install" to install the missed gems
 
-* Deployment instructions
+   3. run rails s to run the application
 
-* ...
+   4. Enter localhost:3000/trending url in browser to see the daily trending developers
+
+   5. Pagination is integrated with each page 10 results are displaying with next and previous buttons
