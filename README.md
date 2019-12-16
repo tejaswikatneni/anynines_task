@@ -7,7 +7,7 @@ application up and running.
 
 * Rails version: 5.0.7.2
 
-* Database not required
+* Database not required - mysql2 gem installed
 
 * RestClient gem used to fetch the daily trending developers from github-trending-api
 
